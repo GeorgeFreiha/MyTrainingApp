@@ -8,16 +8,19 @@ import { TrainingprogramsService, Program } from './../../services/trainingprogr
 })
 export class ProgramLibraryPage implements OnInit {
   programs: Program[];
+  
 
   constructor(private service: TrainingprogramsService) { }
+  
 
   ngOnInit() {
-
     this.service.getAllPrograms().subscribe( response => {
       this.programs =response;
       console.log(this.programs);
       
   });
+
+ 
 
 }
 
