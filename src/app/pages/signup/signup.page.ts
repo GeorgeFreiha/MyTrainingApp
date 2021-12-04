@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { TrainingprogramsService, User} from './../../services/trainingprograms.service';
 
 @Component({
   selector: 'app-signup',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupPage implements OnInit {
 
-  constructor() { }
+  constructor(private service: TrainingprogramsService) { }
 
   ngOnInit() {
+
   }
 
 }

@@ -10,10 +10,10 @@
     <h1>Login</h1>
     <img src="assets/N1-Training-Logo.png" />
   </div>
-  <form id="form">
-    <app-input placeholder="Email" ></app-input>
-    <app-input type="password" placeholder="Password"></app-input>
-    <ion-button routerLink="/home" expand="block" shape="round"
+  <form id="form" #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <app-input ngModel name="email" placeholder="Email" ></app-input>
+    <app-input  ngModel name="password" placeholder="Email" type="password" placeholder="Password"></app-input>
+    <ion-button type="submit" routerLink="/home" expand="block" shape="round"
       >Login</ion-button
     >
   </form>
